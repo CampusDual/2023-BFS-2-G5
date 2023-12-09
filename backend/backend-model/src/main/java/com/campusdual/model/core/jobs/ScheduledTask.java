@@ -89,7 +89,7 @@ public class ScheduledTask {
     @Scheduled(fixedRate = 1000)
     public void scheduleTask() {
         try {
-
+            System.out.println("Executing programmed task");
             List<String> columns = Arrays.asList(
                     SubLapseDao.ID,
                     SubLapseDao.END,
@@ -106,7 +106,7 @@ public class ScheduledTask {
 
             int erSize = subscriptionsToUpdate.calculateRecordNumber();
             if (erSize > 0 ){
-                System.out.println("here");
+                System.out.println("Hay subscripciones a a actualizar");
                 subscriptionsToUpdate.getRecordValues(0).get(SubLapseDao.PRICE)
                         .equals(subscriptionsToUpdate.getRecordValues(0).get(PlanPriceDao.VALUE));
             }
