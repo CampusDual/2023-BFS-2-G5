@@ -86,7 +86,7 @@ public class ScheduledTask {
         return customSub.get(SubLapseCustomDao.SLC_END) == null || ((Date) customSub.get(SubLapseCustomDao.SLC_END)).after(renewDate);
     }
 
-    @Scheduled(fixedRate = 1000)
+    @Scheduled(fixedRate = 43200000)
     public void scheduleTask() {
         try {
             System.out.println("Executing programmed task");
